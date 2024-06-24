@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .slider {
+  position: relative;
+  width: 800px; /* Ancho del slider */
+  height: 600px; /* Alto del slider */
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+/* Estilos para los botones de navegación */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Estilos para las diapositivas */
+.slides {
+  display: flex;
+  transition: transform 0.5s; /* Transición para el cambio de diapositiva */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para la navegación */
+.slider:hover .prev, .slider:hover .next {
+  opacity: 1;
+}
+
+.prev:hover, .next:hover {
+  background-color: #ccc;
+}
+
+/* Estilos para la transición de diapositivas */
+.slides {
+  transform: translateX(0);
+}
+
+.slider:hover .slides {
+  transform: translateX(-10%);
+}
+
+.slider:hover .slides:nth-child(2) {
+  transform: translateX(-20%);
+}
+
+.slider:hover .slides:nth-child(3) {
+  transform: translateX(-30%);
+}
+
+    </style>
+    <div class="slider">
+        <!-- Botones de navegación -->
+        <button class="prev" aria-label="Anterior">&#10094;</button>
+        <button class="next" aria-label="Siguiente">&#10095;</button>
+      
+        <!-- Contenedor de las diapositivas -->
+        <div class="slides">
+          <!-- Diapositiva 1 -->
+          <div class="slide">
+            <img src="OIP.jpg" alt="Imagen 1">
+            <p>Descripción de la imagen 1</p>
+          </div>
+      
+          <!-- Diapositiva 2 -->
+          <div class="slide">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <p>Descripción de la imagen 2</p>
+          </div>
+      
+          <!-- Diapositiva 3 -->
+          <div class="slide">
+            <img src="imagen3.jpg" alt="Imagen 3">
+            <p>Descripción de la imagen 3</p>
+          </div>
+      
+          <!-- ... Agrega más diapositivas aquí ... -->
+        </div>
+      </div>
+</body>
+</html>
